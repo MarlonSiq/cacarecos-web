@@ -1,0 +1,53 @@
+:root{
+    --bg: #0b0b0b;
+    --card: #ffffff;
+    --pill: rgba(0,0,0,0.06);
+    --accent: #111827;
+    --gap: 1rem;
+  }
+
+  /* page */
+  html,body{height:100%}
+  body{
+    margin:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--bg);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: black;
+    padding:48px;
+  }
+
+  /* wrapper that looks like the white rounded card from the screenshot */
+  .menu {
+    background: var(--card);
+    padding: 18px 22px;
+    border-radius: 16px;
+    display:flex;
+    gap: var(--gap);
+    align-items:center;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    width: min(720px, 92vw);
+    justify-content: center;
+  }
+
+a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;  
+    background: green;
+    padding: 0 10px;
+    gap: 10px;
+} 
+a:hover {
+    background-color: pink;
+} 
+
+.icon{
+    
+    width: 40px;
+    height: 40px;
+    background: red;
+}

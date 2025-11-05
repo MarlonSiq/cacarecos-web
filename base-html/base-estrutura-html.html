@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Estrutura HTML base</title>
+        <link href="" rel="stylesheet"> <!-- google fonts -->
+        <link rel="stylesheet" href="../container-code/estilo.css">
+        <link rel="stylesheet" href="estilo.css">
+        <link rel="icon" href="imagens/favicon.png" type="image/png">
+</head>
+<body>
+
+<!-- INÍCIO code container SIMPLES-->
+<div class="code-wrapper">
+    <div class="code-container">
+        <span>Estrutura HTML Simples</span>
+        <span>base de HTML que voce precisa</span>
+        <div>     
+            <pre><code class="codeBlock">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+        
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    
+    &lt;!-- SEO básico --&gt;
+    &lt;title&gt;YourWebsite&lt;/title&gt;
+    &lt;meta name="description" content="Descrição breve e clara do que o site faz."&gt;
+    &lt;meta name="keywords" content="palavras, chave, relacionadas"&gt;
+    &lt;meta name="author" content="Seu Nome ou Empresa"&gt;
+    
+    &lt;!-- Evita que a página seja indexada enquanto está em construção --&gt;
+    &lt;meta name="robots" content="noindex, nofollow"&gt;    
+    
+    &lt;!-- Define versão canônica da página (evita conteúdo duplicado) --&gt;
+    &lt;link rel="canonical" href="https://www.yourwebsite.com/pagina-principal"&gt;
+    
+    &lt;!-- Performance (pré-carregamento de fontes e CSS) --&gt;
+    &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+    &lt;link rel="preload" href="estilo.css" as="style"&gt;
+  
+    &lt;link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Mulish:wght@400&display=swap" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="estilo.css"&gt;
+    
+    &lt;link rel="icon" href="imagens/favicon.png" type="image/png"&gt;
+    &lt;link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon.png"&gt;        
+    &lt;link rel="icon" type="image/png" sizes="192x192" href="imagens/favicon-192x192.png"&gt;
+    &lt;link rel="icon" type="image/png" sizes="512x512" href="imagens/favicon-512x512.png"&gt;
+    &lt;link rel="apple-touch-icon" href="imagens/apple-touch-icon.png" sizes="180x180"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;header&gt;
+    &lt;nav&gt;
+      &lt;a href="#"&gt;Início&lt;/a&gt;
+      &lt;a href="#"&gt;Sobre&lt;/a&gt;
+      &lt;a href="#"&gt;Contato&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;!-- Conteúdo principal --&gt;
+  &lt;main id="main"&gt;
+    &lt;section id="intro"&gt;
+      &lt;h1&gt;Bem-vindo ao YourWebsite&lt;/h1&gt;
+      &lt;p&gt;Um texto de apresentação do seu site.&lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;section id="servicos"&gt;
+      &lt;h2&gt;Nossos Serviços&lt;/h2&gt;
+      &lt;p&gt;Descreva o que você oferece aqui.&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;script src="texto-footer.js" defer&gt;&lt;/script&gt;
+     
+&lt;footer&gt;
+    &lt;p&gt;YourWebsite &copy; &lt;span id="current-year"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/footer&gt;
+
+    &lt;script&gt;
+        document.querySelector('#current-year').textContent = new Date().getFullYear();
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+            <div class="sticky"><button class="copyBtn">Copiar</button></div>   
+        </div>
+    </div>
+</div>
+<!-- FIM code container SIMPLES-->
+
+<!-- INÍCIO code container AVANÇADO-->
+<div class="code-wrapper">
+    <div class="code-container">
+        <span>Estrutura HTML Avançada</span>
+        <span>base completa para SEO e mais</span>
+        <div>     
+            <pre><code class="codeBlock">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    
+    &lt;!-- SEO básico --&gt;
+    &lt;title&gt;YourWebsite&lt;/title&gt;
+    &lt;meta name="description" content="Descrição breve e clara do que o site faz."&gt;
+    &lt;meta name="keywords" content="palavras, chave, relacionadas"&gt;
+    &lt;meta name="author" content="Seu Nome ou Empresa"&gt;
+    
+    &lt;!-- Evita que a página seja indexada enquanto está em construção --&gt;
+    &lt;meta name="robots" content="noindex, nofollow"&gt;    
+    
+    &lt;!-- Define versão canônica da página (evita conteúdo duplicado) --&gt;
+    &lt;link rel="canonical" href="https://www.yourwebsite.com/pagina-principal"&gt;
+
+    &lt;!-- Ajuda a diferenciar idiomas/regiões (caso use múltiplos idiomas) --&gt;
+    &lt;link rel="alternate" hreflang="pt-BR" href="https://www.yourwebsite.com/"&gt;    
+    &lt;link rel="alternate" hreflang="en-US" href="https://seudominio.com/en/" /&gt;
+    &lt;link rel="alternate" hreflang="x-default" href="https://seudominio.com/" /&gt;
+
+    &lt;!-- Open Graph, usados por Facebook, Instagram, WhatsApp, etc. --&gt;   
+    &lt;meta property="og:title" content="YourWebsite - Portfólio de Arte"&gt;
+    &lt;meta property="og:description" content="Veja as criações únicas e projetos visuais de YourWebsite."&gt;
+    &lt;meta property="og:image" content="imagens/share-image.png"&gt;
+    &lt;meta property="og:url" content="https://www.yourwebsite.com"&gt;
+    &lt;meta property="og:type" content="website"&gt;
+    &lt;meta property="og:locale" content="pt_BR"&gt;
+    
+    &lt;!-- Otimizado para X/Twitter --&gt;
+    &lt;meta name="twitter:card" content="summary_large_image"&gt;
+    &lt;meta name="twitter:title" content="YourWebsite - Portfólio de Arte"&gt;
+    &lt;meta name="twitter:description" content="Veja minhas criações digitais."&gt;
+    &lt;meta name="twitter:image" content="https://www.yourwebsite.com/imagens/share-image.png"&gt;
+    &lt;meta name="twitter:site" content="@SeuPerfil"&gt;
+    &lt;meta name="twitter:creator" content="@SeuPerfil"&gt;
+    
+    &lt;!-- Schema Markup Exemplo para artigos ou blog --&gt;
+    &lt;script type="application/ld+json"&gt;
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Como criei minha nova coleção de ilustrações",
+        "author": {
+            "@type": "Person",
+            "name": "YourWebsite"
+            },
+        "datePublished": "2025-11-04",
+        "image": "https://www.yourwebsite.com/imagens/artigo.jpg",
+        "publisher": {
+            "@type": "Organization",
+            "name": "YourWebsite"
+            }
+    }
+    &lt;/script&gt;
+    
+    &lt;!-- Performance (pré-carregamento de fontes e CSS) --&gt;
+    &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+    &lt;link rel="preload" href="estilo.css" as="style"&gt;
+  
+    &lt;link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Mulish:wght@400&display=swap" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="estilo.css"&gt;
+    
+    &lt;link rel="icon" href="imagens/favicon.png" type="image/png"&gt;
+    &lt;link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon.png"&gt;        
+    &lt;link rel="icon" type="image/png" sizes="192x192" href="imagens/favicon-192x192.png"&gt;
+    &lt;link rel="icon" type="image/png" sizes="512x512" href="imagens/favicon-512x512.png"&gt;
+    &lt;link rel="apple-touch-icon" href="imagens/apple-touch-icon.png" sizes="180x180"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;header&gt;
+    &lt;nav&gt;
+      &lt;a href="#"&gt;Início&lt;/a&gt;
+      &lt;a href="#"&gt;Sobre&lt;/a&gt;
+      &lt;a href="#"&gt;Contato&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;!-- Conteúdo principal --&gt;
+  &lt;main id="main"&gt;
+    &lt;section id="intro"&gt;
+      &lt;h1&gt;Bem-vindo ao YourWebsite&lt;/h1&gt;
+      &lt;p&gt;Um texto de apresentação do seu site.&lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;section id="servicos"&gt;
+      &lt;h2&gt;Nossos Serviços&lt;/h2&gt;
+      &lt;p&gt;Descreva o que você oferece aqui.&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;script src="texto-footer.js" defer&gt;&lt;/script&gt;
+     
+&lt;footer&gt;
+    &lt;p&gt;YourWebsite &copy; &lt;span id="current-year"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/footer&gt;
+
+    &lt;script&gt;
+        document.querySelector('#current-year').textContent = new Date().getFullYear();
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+            <div class="sticky"><button class="copyBtn">Copiar</button></div>   
+        </div>
+    </div>
+</div>
+<!-- FIM code container AVANCADO-->
+
+<script src="../container-code/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Tab bar animation</title>
+<style>
+  :root{
+    --bg: #0b0b0b;
+    --card: #ffffff;
+    --pill: rgba(0,0,0,0.06);
+    --accent: #111827;
+    --gap: 1rem;
+  }
+
+  /* page */
+  html,body{height:100%}
+  body{
+    margin:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--bg);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color:#fff;
+    padding:48px;
+  }
+
+  /* wrapper that looks like the white rounded card from the screenshot */
+  .menu {
+    background: var(--card);
+    padding: 18px 22px;
+    border-radius: 16px;
+    display:flex;
+    gap: var(--gap);
+    align-items:center;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    width: min(720px, 92vw);
+    justify-content: center;
+  }
+
+  /* each tab */
+  .link {
+    --w: 80px;           /* width when not hovered */
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    position: relative;
+    z-index: 1;
+    width: var(--w);
+    height: 52px;
+    border-radius: 99em;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    cursor: pointer;
+    gap: .5rem;
+    padding: 0 .6rem;
+    transition: width .25s ease, transform .18s ease;
+    white-space: nowrap;
+  }
+
+  .link:focus { outline: none; box-shadow: 0 0 0 3px rgba(0,0,0,0.06); }
+
+  /* the moving pill (pseudo element) */
+  .link::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    display:block;
+    border-radius: 99em;
+    width: 100%;
+    height: 100%;
+    background: var(--pill);
+    transform: translateX(100%); /* hidden by default */
+    transition: transform .25s ease;
+    transform-origin: center right;
+  }
+
+  /* when we hover/focus a link, expand its width and bring the pill */
+  .link:hover,
+  .link:focus {
+    width: 140px; /* expanded width like in screenshot */
+  }
+  .link:hover::before,
+  .link:focus::before {
+    transform: translateX(0%);
+  }
+
+  /* icon container */
+  .link .icon {
+    width: 20px;
+    height: 20px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    flex: 0 0 20px;
+    opacity: .95;
+  }
+
+  /* title that fades in when expanded */
+  .link .title {
+    transform: translateX(-6px);
+    opacity: 0;
+    transition: transform .25s ease, opacity .25s ease;
+    font-size: .92rem;
+    color: #222;
+  }
+
+  .link:hover .title, .link:focus .title {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  /* small subtle hover scale on icon */
+  .link:hover .icon svg, .link:focus .icon svg {
+    transform: scale(1.03);
+    transition: transform .18s ease;
+  }
+
+  /* make keyboard navigation visible */
+  .link:focus-visible {
+    box-shadow: 0 0 0 4px rgba(59,130,246,0.15);
+    border-radius: 12px;
+  }
+
+  /* layout helpers for center row with icons */
+  .spacer { width: 0.4rem; }
+
+  /* responsive: shrink on very small screens */
+  @media (max-width:420px){
+    .menu { padding: 12px; gap:.5rem; }
+    .link { height:44px; --w:60px; }
+    .link:hover, .link:focus { width:120px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="menu" aria-label="barra de navegação">
+  <a class="link" href="#" role="button" aria-label="Home">
+    <span class="icon" aria-hidden="true">
+      <!-- house svg -->
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 11.5L12 4l9 7.5" />
+        <path d="M5 11.5v7.5a1 1 0 0 0 1 1h3v-6h6v6h3a1 1 0 0 0 1-1v-7.5" />
+      </svg>
+    </span>
+    <span class="title">Home</span>
+  </a>
+
+  <a class="link" href="#" role="button" aria-label="Criar">
+    <span class="icon" aria-hidden="true">
+      <!-- pencil -->
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 21v-3l11-11 3 3L6 21H3z"/>
+        <path d="M14.5 5.5l3 3"/>
+      </svg>
+    </span>
+    <span class="title">Criar</span>
+  </a>
+
+  <a class="link" href="#" role="button" aria-label="Mensagens">
+    <span class="icon" aria-hidden="true">
+      <!-- chat -->
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
+    </span>
+    <span class="title">Mensagens</span>
+  </a>
+
+  <!-- central search item, we make it look like the highlighted one -->
+  <a class="link" href="#" role="button" aria-label="Buscar">
+    <span class="icon" aria-hidden="true">
+      <!-- magnifier -->
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="6"></circle>
+        <path d="M21 21l-4.35-4.35"></path>
+      </svg>
+    </span>
+    <span class="title">Search</span>
+  </a>
+
+  <a class="link" href="#" role="button" aria-label="Perfil">
+    <span class="icon" aria-hidden="true">
+      <!-- user -->
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+        <circle cx="12" cy="7" r="4"></circle>
+      </svg>
+    </span>
+    <span class="title">Perfil</span>
+  </a>
+</nav>
+
+<!-- minimal JS to allow keyboard selection with arrow keys for accessibility -->
+<script>
+  (function(){
+    const links = Array.from(document.querySelectorAll('.link'));
+    links.forEach((ln, i) => {
+      ln.addEventListener('keydown', (e) => {
+        if(e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          const next = links[(i+1) % links.length];
+          next.focus();
+        } else if(e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          const prev = links[(i-1 + links.length) % links.length];
+          prev.focus();
+        }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>

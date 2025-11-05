@@ -1,0 +1,26 @@
+html{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    width: 58vw;
+    border-radius: 20px;
+    border: solid 2px black ;
+    padding: 10px;
+}
+.slides {
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.slides img{
+    width: 50vw;
+    scroll-snap-align: start;
+    border-radius: 10px;
+    border: solid 2px black ;
+}

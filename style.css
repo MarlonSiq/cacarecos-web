@@ -1,0 +1,171 @@
+/* ===== Estilo geral ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Container principal ===== */
+nav {
+    width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #f8f9fa;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+main{
+    width: 80vw;
+    background: gree;
+}
+
+#lista-cacarecos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-items: center; /* centraliza só horizontalmente */
+  place-items: center; 
+  gap: 40px;
+}
+
+/* ===== Card dos cacarecos ===== */
+.card {
+    width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+.card:not(:last-child){
+    margin-bottom:;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  z-index:;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin: 15px;
+  color: #222;
+  height: 50px;
+  background: ;
+}
+
+.card p {
+  font-size: 0.95rem;
+  margin: 0 15px 15px;
+  color: #555;
+}
+
+.descricao{
+   background: ; 
+   height: 50px;
+}
+/* ===== Botão ===== */
+.botao {
+  display: inline-block;
+    margin: 0 15px 15px;
+  padding: 10px 40px;
+  background: #0078ff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.botao:hover {
+  background: #005fd1;
+}
+
+/* Filtros */
+#filtros-container {
+  text-align: center;
+  margin-bottom:;
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0;
+}
+
+#filtros-container h2 {
+  margin-right: 20px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+#filtros {
+  display: flex;
+  flex-wrap: ;
+  justify-content: center;
+  gap: 10px;
+}
+
+.filtro-btn {
+  background: #eee;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s, transform 0.2s;
+  height: 40px;
+  padding: 0 20px;
+  
+}
+
+.filtro-btn.ativo {
+  background: #0078ff;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 0 6px rgba(0,120,255,0.5);
+}
+
+/* Tags dentro dos cards */
+.tags {
+  display: flex;
+  width: 300px;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 8px;
+  margin: 0 15px 15px;
+  background: pin;
+  border-radius: 50px;
+}
+.tags > * {
+  flex: 0 0 auto;
+}
+/* .tags {
+  scrollbar-width: thin; /* Firefox
+}
+
+.tags::-webkit-scrollbar {
+  height: 6px;  apenas horizontal
+} */
+
+.tag {
+  background: #f0f0f0;
+  border-radius: 12px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.card .info {
+  font-size: 0.85em;
+  color: #666;
+  margin-bottom: 20px;
+}

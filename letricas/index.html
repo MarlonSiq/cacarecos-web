@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letra Sincronizada</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Letra Desmitificar, Marina Sena</h1>
+
+    <div id="lyrics">
+      <p id="current-line"></p>
+    </div>
+
+    <div class="controls">
+      <button id="startBtn">Iniciar</button>
+      <button id="editBtn"style="display: none;">Modo Editor</button>
+      <div id="progressBar"><div id="progress"></div></div>
+    </div>
+  </div>
+
+  <div id="editorPanel" class="hidden">
+    <h2>Modo Editor</h2>
+    <div id="verseList"></div>
+    <button id="addVerseBtn">+ Adicionar Verso</button>
+    <button id="saveBtn">Salvar Alterações</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

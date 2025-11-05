@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO básico -->
+    <title>YourWebsite</title>
+    <meta name="description" content="Descrição breve e clara do que o site faz.">
+    <meta name="keywords" content="palavras, chave, relacionadas">
+    <meta name="author" content="Seu Nome ou Empresa">
+    
+    <!-- Evita que a página seja indexada enquanto está em construção -->
+    <meta name="robots" content="noindex, nofollow">    
+    
+    <!-- Define versão canônica da página (evita conteúdo duplicado) -->
+    <link rel="canonical" href="https://www.yourwebsite.com/pagina-principal">
+
+    <!-- Ajuda a diferenciar idiomas/regiões (caso use múltiplos idiomas) -->
+    <link rel="alternate" hreflang="pt-BR" href="https://www.yourwebsite.com/">    
+    <link rel="alternate" hreflang="en-US" href="https://seudominio.com/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://seudominio.com/" />
+
+    <!-- Open Graph, usados por Facebook, Instagram, WhatsApp, etc. -->   
+    <meta property="og:title" content="YourWebsite - Portfólio de Arte">
+    <meta property="og:description" content="Veja as criações únicas e projetos visuais de YourWebsite.">
+    <meta property="og:image" content="imagens/share-image.png">
+    <meta property="og:url" content="https://www.yourwebsite.com">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Otimizado para X/Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="YourWebsite - Portfólio de Arte">
+    <meta name="twitter:description" content="Veja minhas criações digitais.">
+    <meta name="twitter:image" content="https://www.yourwebsite.com/imagens/share-image.png">
+    <meta name="twitter:site" content="@SeuPerfil">
+    <meta name="twitter:creator" content="@SeuPerfil">
+    
+    <!-- Schema Markup Exemplo para artigos ou blog -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Como criei minha nova coleção de ilustrações",
+        "author": {
+            "@type": "Person",
+            "name": "YourWebsite"
+            },
+        "datePublished": "2025-11-04",
+        "image": "https://www.yourwebsite.com/imagens/artigo.jpg",
+        "publisher": {
+            "@type": "Organization",
+            "name": "YourWebsite"
+            }
+    }
+    </script>
+    
+    <!-- Performance (pré-carregamento de fontes e CSS) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" href="estilo.css" as="style">
+  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Mulish:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+    
+    <link rel="icon" href="imagens/favicon.png" type="image/png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon.png">        
+    <link rel="icon" type="image/png" sizes="192x192" href="imagens/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="imagens/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="imagens/apple-touch-icon.png" sizes="180x180">
+</head>
+
+<body>
+
+    <header>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main id="main">
+    <section id="intro">
+      <h1>Bem-vindo ao YourWebsite</h1>
+      <p>Um texto de apresentação do seu site.</p>
+    </section>
+
+    <section id="servicos">
+      <h2>Nossos Serviços</h2>
+      <p>Descreva o que você oferece aqui.</p>
+    </section>
+  </main>
+
+  <script src="texto-footer.js" defer></script>
+     
+<footer>
+    <p>YourWebsite &copy; <span id="current-year"></span></p>
+</footer>
+
+    <script>
+        document.querySelector('#current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

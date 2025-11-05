@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cacarecos Web</title>
+  
+  <style>
+.container {
+  width: 50vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.slides img {
+  width: 50vw;
+  scroll-snap-align: start;
+}
+
+.slides::-webkit-scrollbar {
+  display: none;
+}
+
+/* bolinhas */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  border: none;
+  background: #bbb;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dots button.active {
+  background: #333;
+}
+  </style>
+  
+</head>
+  
+<body>
+    
+<div class="container">
+  <div class="slides">
+    <img src="../../images/base.jpg">
+    <img src="../../images/base.jpg">
+    <img src="../../images/base.jpg">
+  </div>
+  <div class="dots"></div>
+</div> 
+    
+    <script>
+        const slides = document.querySelector('.slides');
+const imgs = slides.querySelectorAll('img');
+const dotsContainer = document.querySelector('.dots');
+
+// cria uma bolinha pra cada imagem
+imgs.forEach((_, i) => {
+  const dot = document.createElement('button');
+  if (i === 0) dot.classList.add('active');
+  dot.addEventListener('click', () => {
+    slides.scrollTo({
+      left: i * slides.clientWidth,
+      behavior: 'smooth'
+    });
+  });
+  dotsContainer.appendChild(dot);
+});
+
+// atualiza bolinha ativa conforme o scroll
+slides.addEventListener('scroll', () => {
+  const index = Math.round(slides.scrollLeft / slides.clientWidth);
+  document.querySelectorAll('.dots button').forEach((btn, i) => {
+    btn.classList.toggle('active', i === index);
+  });
+});
+    </script>
+</body>
+
+</html>

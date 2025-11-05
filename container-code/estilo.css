@@ -1,0 +1,65 @@
+:root{   
+    --code-container: hsl(0 0% 10%);
+    --code-area: hsl(0 0% 15%);
+    --copy-button: hsl(0 0% 25%);
+}
+
+.code-wrapper {
+    display: flex;
+    margin: 20px 0;
+    max-width: 100%;
+    background:;
+}
+
+.code-container {
+  display: flex;            
+  flex-direction: column;
+    width: 700px;
+  gap: 15px;            
+  background: var(--code-container);
+  border-radius: 24px;
+  padding: 20px;
+  box-sizing: border-box; /* botão no topo */
+  color: white;
+}
+
+.code-container pre {
+    width: auto;
+  margin: 0;
+  overflow-x: auto;            /* scroll horizontal apenas no código */
+  white-space: pre;            /* preserva espaços e quebras */
+  padding: 10px;
+  flex: 1;                     /* ocupa todo espaço disponível */
+  background: var(--code-area);
+  border-radius: 4px;
+  color: #dcdcdc;
+  font-family: monospace;
+  max-height: 300px;
+}
+
+.code-container span:nth-child(1) {
+    color: re;
+    font-weight: bold;
+}
+.code-container .sticky{
+    background: var(--code-container);
+    padding: 10px 0;
+    position: sticky;             /* sticky no topo do container */
+    top: ;
+    bottom: 0;
+}
+
+
+.copyBtn {  
+  align-self: ;
+  background: var(--copy-button);
+  color: #00aaff;
+  border: none;
+  padding: 12px 60px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.copyBtn:hover {
+  background: #0088cc;
+    color: white;
+}

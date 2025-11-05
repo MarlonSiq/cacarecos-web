@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cacarecos Web</title>
+  
+  <style>
+.carousel {
+    <!-- display: flex;
+    flex-direction: column; -->
+  position: relative;
+  width: 50vw;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  transition: transform 0.6s ease;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 50vw;
+  display: block;
+}
+
+/* Esconde os radios */
+input[type="radio"] {
+  display: none;
+}
+
+/* Posição dos slides conforme o radio ativo */
+#s1:checked ~ .slides {
+  transform: translateX(0);
+}
+#s2:checked ~ .slides {
+  transform: translateX(-100%);
+}
+#s3:checked ~ .slides {
+  transform: translateX(-200%);
+}
+
+/* As bolinhas */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 10px;
+}
+
+.dots label {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background: #bbb;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* Bolinha ativa muda de cor */
+#s1:checked ~ .dots label[for="s1"],
+#s2:checked ~ .dots label[for="s2"],
+#s3:checked ~ .dots label[for="s3"] {
+  background: #333;
+  width: 20px;
+  
+}
+  </style>
+  
+</head>
+  
+<body>
+    
+<div class="carousel">
+  <input type="radio" name="slide" id="s1" checked>
+  <input type="radio" name="slide" id="s2">
+  <input type="radio" name="slide" id="s3">
+
+  <div class="slides">
+    <div class="slide"><img src="../../images/base.jpg"></div>
+    <div class="slide"><img src="../../images/base.jpg"></div>
+    <div class="slide"><img src="../../images/base.jpg"></div>
+  </div>
+
+  <div class="dots">
+    <label for="s1"></label>
+    <label for="s2"></label>
+    <label for="s3"></label>
+  </div>
+</div>
+        
+</body>
+
+</html>
