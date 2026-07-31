@@ -1,0 +1,200 @@
+/* =========================
+   BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  color: #111;
+}
+
+/* =========================
+   TOPO
+========================= */
+.topbar {
+  background: #111;
+  color: white;
+  padding: 18px 25px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+
+.topbar h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  width: min(1200px, 95%);
+  margin: 30px auto;
+}
+
+/* =========================
+   GRID HQs
+========================= */
+
+.grid {
+  display: grid;
+
+  /* FILEIRA X COLUNA AUTOMÁTICA */
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+
+  gap: 25px;
+}
+
+/* =========================
+   CARD HQ
+========================= */
+
+.hq-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+
+  cursor: pointer;
+
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.hq-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+.hq-card img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+
+.hq-card h2 {
+  font-size: 14px;
+  padding: 12px;
+  text-align: center;
+}
+
+/* ===============================
+   FUNDO DO LEITOR
+================================ */
+.reader {
+  position: relative;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  /* fundo mais elegante */
+  background:
+    radial-gradient(circle at center, #2a2a2a 0%, #111 70%, #000 100%);
+}
+
+/* ===============================
+   IMAGEM HQ
+================================ */
+.reader img {
+  max-width: 96%;
+  max-height: 96%;
+
+  object-fit: contain;
+
+  border-radius: 6px;
+
+  /* destaque da HQ */
+  box-shadow:
+    0 15px 40px rgba(0,0,0,.7),
+    0 0 0 1px rgba(255,255,255,.05);
+
+  transition: opacity .25s ease;
+}
+
+/* ===============================
+   POPUP (PAGINAÇÃO)
+================================ */
+#popup {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: hsl(0, 0%, 0%);
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(10px);
+
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .3px;
+
+  padding: 8px 18px;
+  border-radius: 999px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,.4);
+
+  opacity: 0;
+  transition: opacity .25s ease;
+
+  z-index: 9999;
+}
+
+/* ===============================
+   INDICADOR VISUAL LATERAL
+================================ */
+.reader::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(0,0,0,.45) 0%,
+      transparent 12%,
+      transparent 88%,
+      rgba(0,0,0,.45) 100%
+    );
+
+  pointer-events: none;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+@media (max-width: 768px) {
+
+  .reader img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0;
+  }
+
+  #popup {
+    top: 10px;
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+}
+
+/* ===============================
+   TABLET
+================================ */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .reader img {
+    max-width: 98%;
+    max-height: 98%;
+  }
+}

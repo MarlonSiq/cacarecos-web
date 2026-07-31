@@ -1,0 +1,13 @@
+.large-button, .large-button-clear{
+    transition: all 0.15s ease-in;
+}
+
+.large-button:hover{
+   padding-left:40px; 
+   /* background-color: var(--bg-container-hover; */
+}
+
+.large-button-clear:hover{
+    padding-left: 20px;
+    /* background-color: var(--bg-container-hover); */
+}

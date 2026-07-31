@@ -17,73 +17,65 @@
         <span>base de HTML que voce precisa</span>
         <div>     
             <pre><code class="codeBlock">
+
 &lt;!DOCTYPE html&gt;
-&lt;html lang="pt-BR"&gt;
+&lt;html lang=&quot;pt-BR&quot;&gt;
+
 &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-        
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+
     &lt;!-- SEO básico --&gt;
     &lt;title&gt;YourWebsite&lt;/title&gt;
-    &lt;meta name="description" content="Descrição breve e clara do que o site faz."&gt;
-    &lt;meta name="keywords" content="palavras, chave, relacionadas"&gt;
-    &lt;meta name="author" content="Seu Nome ou Empresa"&gt;
-    
+
     &lt;!-- Evita que a página seja indexada enquanto está em construção --&gt;
-    &lt;meta name="robots" content="noindex, nofollow"&gt;    
-    
-    &lt;!-- Define versão canônica da página (evita conteúdo duplicado) --&gt;
-    &lt;link rel="canonical" href="https://www.yourwebsite.com/pagina-principal"&gt;
-    
-    &lt;!-- Performance (pré-carregamento de fontes e CSS) --&gt;
-    &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
-    &lt;link rel="preload" href="estilo.css" as="style"&gt;
-  
-    &lt;link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Mulish:wght@400&display=swap" rel="stylesheet"&gt;
-    &lt;link rel="stylesheet" href="estilo.css"&gt;
-    
-    &lt;link rel="icon" href="imagens/favicon.png" type="image/png"&gt;
-    &lt;link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon.png"&gt;        
-    &lt;link rel="icon" type="image/png" sizes="192x192" href="imagens/favicon-192x192.png"&gt;
-    &lt;link rel="icon" type="image/png" sizes="512x512" href="imagens/favicon-512x512.png"&gt;
-    &lt;link rel="apple-touch-icon" href="imagens/apple-touch-icon.png" sizes="180x180"&gt;
+    &lt;meta name=&quot;robots&quot; content=&quot;noindex, nofollow&quot;&gt;
+
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;family=Mulish:wght@400&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;estilo.css&quot;&gt;
+
+    &lt;link rel=&quot;icon&quot; href=&quot;imagens/favicon.png&quot; type=&quot;image/png&quot;&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;32x32&quot; href=&quot;imagens/favicon.png&quot;&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;192x192&quot; href=&quot;imagens/favicon-192x192.png&quot;&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;512x512&quot; href=&quot;imagens/favicon-512x512.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;imagens/apple-touch-icon.png&quot; sizes=&quot;180x180&quot;&gt;
 &lt;/head&gt;
 
 &lt;body&gt;
 
     &lt;header&gt;
-    &lt;nav&gt;
-      &lt;a href="#"&gt;Início&lt;/a&gt;
-      &lt;a href="#"&gt;Sobre&lt;/a&gt;
-      &lt;a href="#"&gt;Contato&lt;/a&gt;
-    &lt;/nav&gt;
-  &lt;/header&gt;
+        &lt;nav&gt;
+            &lt;a href=&quot;#&quot;&gt;Início&lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;Sobre&lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;Contato&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
 
-  &lt;!-- Conteúdo principal --&gt;
-  &lt;main id="main"&gt;
-    &lt;section id="intro"&gt;
-      &lt;h1&gt;Bem-vindo ao YourWebsite&lt;/h1&gt;
-      &lt;p&gt;Um texto de apresentação do seu site.&lt;/p&gt;
-    &lt;/section&gt;
+    &lt;!-- Conteúdo principal --&gt;
+    &lt;main id=&quot;main&quot;&gt;
+        &lt;section id=&quot;intro&quot;&gt;
+            &lt;h1&gt;Bem-vindo ao YourWebsite&lt;/h1&gt;
+            &lt;p&gt;Um texto de apresentação do seu site.&lt;/p&gt;
+        &lt;/section&gt;
 
-    &lt;section id="servicos"&gt;
-      &lt;h2&gt;Nossos Serviços&lt;/h2&gt;
-      &lt;p&gt;Descreva o que você oferece aqui.&lt;/p&gt;
-    &lt;/section&gt;
-  &lt;/main&gt;
+        &lt;section id=&quot;servicos&quot;&gt;
+            &lt;h2&gt;Nossos Serviços&lt;/h2&gt;
+            &lt;p&gt;Descreva o que você oferece aqui.&lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
 
-  &lt;script src="texto-footer.js" defer&gt;&lt;/script&gt;
-     
-&lt;footer&gt;
-    &lt;p&gt;YourWebsite &copy; &lt;span id="current-year"&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/footer&gt;
+    &lt;script src=&quot;texto-footer.js&quot; defer&gt;&lt;/script&gt;
 
-    &lt;script&gt;
-        document.querySelector('#current-year').textContent = new Date().getFullYear();
-    &lt;/script&gt;
+    &lt;footer id=&quot;footer&quot;&gt;
+        YourWebsite &amp;copy; &lt;script&gt;document.write(new Date().getFullYear())&lt;/script&gt;
+    &lt;/footer&gt;
+
 &lt;/body&gt;
+
 &lt;/html&gt;
+
             </code></pre>
             <div class="sticky"><button class="copyBtn">Copiar</button></div>   
         </div>
@@ -91,121 +83,206 @@
 </div>
 <!-- FIM code container SIMPLES-->
 
-<!-- INÍCIO code container AVANÇADO-->
+<!-- INÍCIO code container MEDIUM-->
 <div class="code-wrapper">
     <div class="code-container">
-        <span>Estrutura HTML Avançada</span>
-        <span>base completa para SEO e mais</span>
+        <span>Estrutura HTML Médio</span>
+        <span>base de HTML que voce precisa, com Open Graph, pré-carregamento</span>
         <div>     
             <pre><code class="codeBlock">
+
 &lt;!DOCTYPE html&gt;
-&lt;html lang="pt-BR"&gt;
+&lt;html lang=&quot;pt-BR&quot;&gt;
+
 &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    
-    &lt;!-- SEO básico --&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+
+    &lt;!-- SEO médio --&gt;
     &lt;title&gt;YourWebsite&lt;/title&gt;
-    &lt;meta name="description" content="Descrição breve e clara do que o site faz."&gt;
-    &lt;meta name="keywords" content="palavras, chave, relacionadas"&gt;
-    &lt;meta name="author" content="Seu Nome ou Empresa"&gt;
-    
+    &lt;meta name=&quot;description&quot; content=&quot;Descrição breve e clara do que o site faz.&quot;&gt;
+    &lt;meta name=&quot;keywords&quot; content=&quot;palavras, chave, relacionadas&quot;&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;Seu Nome ou Empresa&quot;&gt;
+
     &lt;!-- Evita que a página seja indexada enquanto está em construção --&gt;
-    &lt;meta name="robots" content="noindex, nofollow"&gt;    
-    
-    &lt;!-- Define versão canônica da página (evita conteúdo duplicado) --&gt;
-    &lt;link rel="canonical" href="https://www.yourwebsite.com/pagina-principal"&gt;
+    &lt;meta name=&quot;robots&quot; content=&quot;noindex, nofollow&quot;&gt;
 
-    &lt;!-- Ajuda a diferenciar idiomas/regiões (caso use múltiplos idiomas) --&gt;
-    &lt;link rel="alternate" hreflang="pt-BR" href="https://www.yourwebsite.com/"&gt;    
-    &lt;link rel="alternate" hreflang="en-US" href="https://seudominio.com/en/" /&gt;
-    &lt;link rel="alternate" hreflang="x-default" href="https://seudominio.com/" /&gt;
 
-    &lt;!-- Open Graph, usados por Facebook, Instagram, WhatsApp, etc. --&gt;   
-    &lt;meta property="og:title" content="YourWebsite - Portfólio de Arte"&gt;
-    &lt;meta property="og:description" content="Veja as criações únicas e projetos visuais de YourWebsite."&gt;
-    &lt;meta property="og:image" content="imagens/share-image.png"&gt;
-    &lt;meta property="og:url" content="https://www.yourwebsite.com"&gt;
-    &lt;meta property="og:type" content="website"&gt;
-    &lt;meta property="og:locale" content="pt_BR"&gt;
-    
+    &lt;!-- Open Graph, usados por Facebook, Instagram, WhatsApp, etc. --&gt;
+    &lt;meta property=&quot;og:title&quot; content=&quot;YourWebsite - Portfólio de Arte&quot;&gt;
+    &lt;meta property=&quot;og:description&quot; content=&quot;Veja as criações únicas e projetos visuais de YourWebsite.&quot;&gt;
+    &lt;meta property=&quot;og:image&quot; content=&quot;imagens/share-image.png&quot;&gt;
+    &lt;meta property=&quot;og:url&quot; content=&quot;https://www.yourwebsite.com&quot;&gt;
+    &lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;
+    &lt;meta property=&quot;og:locale&quot; content=&quot;pt_BR&quot;&gt;
+
     &lt;!-- Otimizado para X/Twitter --&gt;
-    &lt;meta name="twitter:card" content="summary_large_image"&gt;
-    &lt;meta name="twitter:title" content="YourWebsite - Portfólio de Arte"&gt;
-    &lt;meta name="twitter:description" content="Veja minhas criações digitais."&gt;
-    &lt;meta name="twitter:image" content="https://www.yourwebsite.com/imagens/share-image.png"&gt;
-    &lt;meta name="twitter:site" content="@SeuPerfil"&gt;
-    &lt;meta name="twitter:creator" content="@SeuPerfil"&gt;
-    
-    &lt;!-- Schema Markup Exemplo para artigos ou blog --&gt;
-    &lt;script type="application/ld+json"&gt;
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Como criei minha nova coleção de ilustrações",
-        "author": {
-            "@type": "Person",
-            "name": "YourWebsite"
-            },
-        "datePublished": "2025-11-04",
-        "image": "https://www.yourwebsite.com/imagens/artigo.jpg",
-        "publisher": {
-            "@type": "Organization",
-            "name": "YourWebsite"
-            }
-    }
-    &lt;/script&gt;
-    
+    &lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot;&gt;
+    &lt;meta name=&quot;twitter:title&quot; content=&quot;YourWebsite - Portfólio de Arte&quot;&gt;
+    &lt;meta name=&quot;twitter:description&quot; content=&quot;Veja minhas criações digitais.&quot;&gt;
+    &lt;meta name=&quot;twitter:image&quot; content=&quot;https://www.yourwebsite.com/imagens/share-image.png&quot;&gt;
+    &lt;meta name=&quot;twitter:site&quot; content=&quot;@SeuPerfil&quot;&gt;
+    &lt;meta name=&quot;twitter:creator&quot; content=&quot;@SeuPerfil&quot;&gt;    
+
     &lt;!-- Performance (pré-carregamento de fontes e CSS) --&gt;
-    &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
-    &lt;link rel="preload" href="estilo.css" as="style"&gt;
-  
-    &lt;link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Mulish:wght@400&display=swap" rel="stylesheet"&gt;
-    &lt;link rel="stylesheet" href="estilo.css"&gt;
-    
-    &lt;link rel="icon" href="imagens/favicon.png" type="image/png"&gt;
-    &lt;link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon.png"&gt;        
-    &lt;link rel="icon" type="image/png" sizes="192x192" href="imagens/favicon-192x192.png"&gt;
-    &lt;link rel="icon" type="image/png" sizes="512x512" href="imagens/favicon-512x512.png"&gt;
-    &lt;link rel="apple-touch-icon" href="imagens/apple-touch-icon.png" sizes="180x180"&gt;
+    &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+    &lt;link rel=&quot;preload&quot; href=&quot;estilo.css&quot; as=&quot;style&quot;&gt;
+
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;family=Mulish:wght@400&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;estilo.css&quot;&gt;
+
+    &lt;link rel=&quot;icon&quot; href=&quot;imagens/favicon.png&quot; type=&quot;image/png&quot;&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;32x32&quot; href=&quot;imagens/favicon.png&quot;&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;192x192&quot; href=&quot;imagens/favicon-192x192.png&quot;&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;512x512&quot; href=&quot;imagens/favicon-512x512.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;imagens/apple-touch-icon.png&quot; sizes=&quot;180x180&quot;&gt;
 &lt;/head&gt;
 
 &lt;body&gt;
 
     &lt;header&gt;
-    &lt;nav&gt;
-      &lt;a href="#"&gt;Início&lt;/a&gt;
-      &lt;a href="#"&gt;Sobre&lt;/a&gt;
-      &lt;a href="#"&gt;Contato&lt;/a&gt;
-    &lt;/nav&gt;
-  &lt;/header&gt;
+        &lt;nav&gt;
+            &lt;a href=&quot;#&quot;&gt;Início&lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;Sobre&lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;Contato&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
 
-  &lt;!-- Conteúdo principal --&gt;
-  &lt;main id="main"&gt;
-    &lt;section id="intro"&gt;
-      &lt;h1&gt;Bem-vindo ao YourWebsite&lt;/h1&gt;
-      &lt;p&gt;Um texto de apresentação do seu site.&lt;/p&gt;
-    &lt;/section&gt;
+    &lt;!-- Conteúdo principal --&gt;
+    &lt;main id=&quot;main&quot;&gt;
+        &lt;section id=&quot;intro&quot;&gt;
+            &lt;h1&gt;Bem-vindo ao YourWebsite&lt;/h1&gt;
+            &lt;p&gt;Um texto de apresentação do seu site.&lt;/p&gt;
+        &lt;/section&gt;
 
-    &lt;section id="servicos"&gt;
-      &lt;h2&gt;Nossos Serviços&lt;/h2&gt;
-      &lt;p&gt;Descreva o que você oferece aqui.&lt;/p&gt;
-    &lt;/section&gt;
-  &lt;/main&gt;
+        &lt;section id=&quot;servicos&quot;&gt;
+            &lt;h2&gt;Nossos Serviços&lt;/h2&gt;
+            &lt;p&gt;Descreva o que você oferece aqui.&lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
 
-  &lt;script src="texto-footer.js" defer&gt;&lt;/script&gt;
-     
-&lt;footer&gt;
-    &lt;p&gt;YourWebsite &copy; &lt;span id="current-year"&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/footer&gt;
+    &lt;script src=&quot;texto-footer.js&quot; defer&gt;&lt;/script&gt;
 
-    &lt;script&gt;
-        document.querySelector('#current-year').textContent = new Date().getFullYear();
-    &lt;/script&gt;
+    &lt;footer id=&quot;footer&quot;&gt;
+        YourWebsite &amp;copy; &lt;script&gt;document.write(new Date().getFullYear())&lt;/script&gt;
+    &lt;/footer&gt;
+
 &lt;/body&gt;
+
 &lt;/html&gt;
+
+            </code></pre>
+            <div class="sticky"><button class="copyBtn">Copiar</button></div>   
+        </div>
+    </div>
+</div>
+<!-- FIM code container MEDIUM-->
+
+<!-- INÍCIO code container AVANÇADO-->
+<div class="code-wrapper">
+    <div class="code-container">
+        <span>Estrutura HTML Avançada</span>
+        <span>base completa para SEO, Idiomas, Schema Markup</span>
+        <div>     
+            <pre><code class="codeBlock">
+                
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-BR&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+
+    &lt;!-- SEO básico --&gt;
+    &lt;title&gt;YourWebsite&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;Descrição breve e clara do que o site faz.&quot;&gt;
+    &lt;meta name=&quot;keywords&quot; content=&quot;palavras, chave, relacionadas&quot;&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;Seu Nome ou Empresa&quot;&gt;
+
+    &lt;!-- Evita que a página seja indexada enquanto está em construção --&gt;
+    &lt;meta name=&quot;robots&quot; content=&quot;noindex, nofollow&quot;&gt;
+
+    &lt;!-- Define versão canônica da página (evita conteúdo duplicado) --&gt;
+    &lt;link rel=&quot;canonical&quot; href=&quot;https://www.yourwebsite.com/pagina-principal&quot;&gt;
+
+    &lt;!-- Ajuda a diferenciar idiomas/regiões (caso use múltiplos idiomas) --&gt;
+    &lt;link rel=&quot;alternate&quot; hreflang=&quot;pt-BR&quot; href=&quot;https://www.yourwebsite.com/&quot;&gt;
+    &lt;link rel=&quot;alternate&quot; hreflang=&quot;en-US&quot; href=&quot;https://seudominio.com/en/&quot; /&gt;
+    &lt;link rel=&quot;alternate&quot; hreflang=&quot;x-default&quot; href=&quot;https://seudominio.com/&quot; /&gt;
+
+    &lt;!-- Open Graph, usados por Facebook, Instagram, WhatsApp, etc. --&gt;
+    &lt;meta property=&quot;og:title&quot; content=&quot;YourWebsite - Portfólio de Arte&quot;&gt;
+    &lt;meta property=&quot;og:description&quot; content=&quot;Veja as criações únicas e projetos visuais de YourWebsite.&quot;&gt;
+    &lt;meta property=&quot;og:image&quot; content=&quot;imagens/share-image.png&quot;&gt;
+    &lt;meta property=&quot;og:url&quot; content=&quot;https://www.yourwebsite.com&quot;&gt;
+    &lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;
+    &lt;meta property=&quot;og:locale&quot; content=&quot;pt_BR&quot;&gt;
+
+    &lt;!-- Otimizado para X/Twitter --&gt;
+    &lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot;&gt;
+    &lt;meta name=&quot;twitter:title&quot; content=&quot;YourWebsite - Portfólio de Arte&quot;&gt;
+    &lt;meta name=&quot;twitter:description&quot; content=&quot;Veja minhas criações digitais.&quot;&gt;
+    &lt;meta name=&quot;twitter:image&quot; content=&quot;https://www.yourwebsite.com/imagens/share-image.png&quot;&gt;
+    &lt;meta name=&quot;twitter:site&quot; content=&quot;@SeuPerfil&quot;&gt;
+    &lt;meta name=&quot;twitter:creator&quot; content=&quot;@SeuPerfil&quot;&gt;
+
+    &lt;!-- Schema Markup Exemplo para artigos ou blog --&gt;
+    &lt;script type=&quot;application/ld+json&quot;&gt;
+        { &quot;@context&quot;: &quot;https://schema.org&quot;, &quot;@type&quot;: &quot;Article&quot;, &quot;headline&quot;: &quot;Como criei minha nova coleção de ilustrações&quot;, &quot;author&quot;: { &quot;@type&quot;: &quot;Person&quot;, &quot;name&quot;: &quot;YourWebsite&quot; }, &quot;datePublished&quot;: &quot;2025-11-04&quot;, &quot;image&quot;: &quot;https://www.yourwebsite.com/imagens/artigo.jpg&quot;,
+        &quot;publisher&quot;: { &quot;@type&quot;: &quot;Organization&quot;, &quot;name&quot;: &quot;YourWebsite&quot; } }
+    &lt;/script&gt;
+
+    &lt;!-- Performance (pré-carregamento de fontes e CSS) --&gt;
+    &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+    &lt;link rel=&quot;preload&quot; href=&quot;estilo.css&quot; as=&quot;style&quot;&gt;
+
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;family=Mulish:wght@400&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;estilo.css&quot;&gt;
+
+    &lt;link rel=&quot;icon&quot; href=&quot;imagens/favicon.png&quot; type=&quot;image/png&quot;&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;32x32&quot; href=&quot;imagens/favicon.png&quot;&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;192x192&quot; href=&quot;imagens/favicon-192x192.png&quot;&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;512x512&quot; href=&quot;imagens/favicon-512x512.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;imagens/apple-touch-icon.png&quot; sizes=&quot;180x180&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;header&gt;
+        &lt;nav&gt;
+            &lt;a href=&quot;#&quot;&gt;Início&lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;Sobre&lt;/a&gt;
+            &lt;a href=&quot;#&quot;&gt;Contato&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;!-- Conteúdo principal --&gt;
+    &lt;main id=&quot;main&quot;&gt;
+        &lt;section id=&quot;intro&quot;&gt;
+            &lt;h1&gt;Bem-vindo ao YourWebsite&lt;/h1&gt;
+            &lt;p&gt;Um texto de apresentação do seu site.&lt;/p&gt;
+        &lt;/section&gt;
+
+        &lt;section id=&quot;servicos&quot;&gt;
+            &lt;h2&gt;Nossos Serviços&lt;/h2&gt;
+            &lt;p&gt;Descreva o que você oferece aqui.&lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;script src=&quot;texto-footer.js&quot; defer&gt;&lt;/script&gt;
+
+    &lt;footer id=&quot;footer&quot;&gt;
+        YourWebsite &amp;copy; &lt;script&gt;document.write(new Date().getFullYear())&lt;/script&gt;
+    &lt;/footer&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+                
             </code></pre>
             <div class="sticky"><button class="copyBtn">Copiar</button></div>   
         </div>

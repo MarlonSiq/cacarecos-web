@@ -1,0 +1,67 @@
+/*Tela de Tablet*/
+@media screen and (max-width: 768px) {
+    :root {
+        --width-card-desk: 80vw;
+        --width-container-desk:70vw;
+        --width-xl-button-desk:67vw;
+        --width-xl-button-desk-clear:67vw;
+        --width-popup-desk:60vw;
+        --width-block-folders: 45vw;
+    }
+    body, html{        
+        background-color:;   
+    }
+}
+
+@media (426px <= width <= 767px){
+   /* .pop-up-photo-profile{
+       display: none;
+   }  */
+}
+
+/*Tela de Celular*/
+@media screen and (max-width: 425px) {
+    :root {
+        --width-card-desk: 100vw;
+        --width-container-desk:92vw;
+        --width-xl-button-desk:85vw;
+        --width-xl-button-desk-clear:80vw;
+        --width-popup-desk:80vw;
+        --width-block-folders: 90vw;
+    }
+    body, html {        
+        margin: 0;          
+    }
+    .card{
+        border-radius: 0;
+        box-shadow: none;
+        background-color: var(--bg-medium);
+    }
+    .nav{
+        width: var(--width-xl-button-desk);
+    }
+    #content {
+  height: auto;
+  padding:20px 40px;
+  border-radius: 20px;
+    }
+    /* .pop-up-photo-profile {
+    width: 40px;
+    position: absolute;
+    top: 8%;
+    right: 29%;
+    } */
+   /* .square-links{
+    width: 35px;
+    height: 35px;
+    } */
+}
+
+/*Tela de Celular MUITO pequenas*/
+@media screen and (max-width: 375px) {
+
+*{
+  scale: 0.965;
+}
+
+}

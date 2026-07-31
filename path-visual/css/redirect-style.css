@@ -1,0 +1,170 @@
+:root {
+    --bg-site: hsl(0, 0%, 85%);
+    --bg-card: hsl(0, 0%, 95%, 0.8);  
+    --bg-container: hsl(0, 0%, 100%); 
+    --bg-container-hover: hsl(0, 0%, 85%); 
+    --large-button: hsl(0, 0%, 100%);
+    --nav-buttons: hsl(0, 0%, 100%);
+    --square-link: hsl(0, 0%, 100%);       
+    
+    --line-large-button-clear: hsl(0, 0%, 85%);
+    
+    --line-photo-profile: hsl(0, 0%, 40%);
+   
+    /* cor texto */
+    --text-default: hsl(0, 0%, 3%);
+}
+
+@media (prefers-color-scheme: dark) {  
+    :root {
+    --bg-site: hsl(0, 0%, 8%);
+}
+}
+
+/* Forçar light */
+[data-theme="light"] {}
+[data-theme="dark"] {}
+
+/* html{
+    margin: 0;
+    padding: 0;
+} */
+body {
+    background: var(--bg-site);
+    /* color: var(--text-default); */
+    color: red;
+    margin: 0;
+    padding: 0;
+}
+p {color: red;}
+
+button{
+    color: red;
+    border: 1px solid red;
+}
+
+/* =====================
+   BASE
+===================== */
+
+/* body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* =====================
+   CARD
+===================== */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+/* =====================
+   NAV
+===================== */
+
+/* .nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+} */
+
+/* =====================
+   LOADER
+===================== */
+
+.loader-wrapper {
+  width: 160px;
+  height: 3px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.loader-line {
+  width: 40%;
+  height: 100%;
+  background: #fff;
+  animation: loading 1.2s ease-in-out infinite;
+}
+
+@keyframes loading {
+  0%   { transform: translateX(-100%); }
+  50%  { transform: translateX(150%); }
+  100% { transform: translateX(150%); }
+}
+
+/* =====================
+   TEXTOS
+===================== */
+
+#message {
+  opacity: 0.8;
+  margin: 0;
+}
+
+#destination {
+  font-size: 0.75rem;
+  opacity: 0.45;
+  max-width: 260px;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* =====================
+   BOTÕES
+===================== */
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.actions button {
+  padding: 8px 50px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* =====================
+   LINKS
+===================== */
+
+/* .links-group {
+  display: flex;
+  gap: 10px;
+}
+
+.links-group .a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.links-group .a:hover {
+  opacity: 1;
+} */

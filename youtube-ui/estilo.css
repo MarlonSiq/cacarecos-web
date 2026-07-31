@@ -1,0 +1,209 @@
+:root{   
+    --bg: hsl(0 0% 100%);
+    --bg-videos: hsl(0 0% 90%);
+    --copy-button: hsl(0 0% 25%);
+    
+    --bg-icon: hsl(0 0% 80%);
+    
+    --bg-nav-active: hsl(0 0% 95%);
+    
+    --text: hsl(0 0% 0%);
+}
+
+html, body {
+display: flex;
+width: 100%;
+flex-direction: column;
+    margin: 0;
+    background: var(--bg);
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    height: 100%;
+}
+a{
+   text-decoration: none; 
+   color: var(--text);
+}
+
+.topbar{
+    width: 100%;
+    height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+    background: var(--bg);
+    gap: 5px;
+}
+
+.topbar-infos{
+    width: 95vw;
+    height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content:;
+  align-items: center;
+  background:;
+  gap: 10px;
+}    
+
+.topbar-infos div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.topbar-links{
+    margin-left: auto;
+}
+
+
+nav{
+    width: 100%;
+    height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+    background: var(--bg);
+    gap: 10px;
+}
+nav a{
+  display: flex;
+  width: auto;
+  height: 30px;
+  justify-content:;
+  align-items: center;
+    background: gree; 
+    gap: 10px;
+    padding: 10px;
+}
+
+nav a:nth-child(3){
+  width: 30px;
+}
+nav a:nth-child(3) > .icon{
+    background-color: transparent;
+}
+
+.active-nav{
+    background: var(--bg-nav-active)!important;
+    width: 120px;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+    background: var(--bg-icon);
+}
+.icon-configs{
+    width: 30px;
+    height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+    background:;
+}
+.icon-configs:hover{
+    background: var(--bg-icon);
+}
+
+#main{
+    width: 95vw;
+    height: 100%;
+    margin-top: 110px;
+    background: pin;
+}
+#main > section{
+    margin-bottom: 10px;
+}
+
+.shorts{
+display: flex;
+  flex-direction: row;
+    width: 100%;
+    height: auto;
+    background: blu;
+    gap: 10px;
+}
+.shorts div{
+    display: flex;
+    width: calc(100% / 6);
+    aspect-ratio: 9 / 16;
+    background: var(--bg-videos);
+}
+.card-shorts div{
+    display:;
+    background:;
+}
+
+.infos-shorts{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    background: red;
+}
+
+.text-section-shorts{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.videos{
+    display: flex;
+  flex-direction: row;
+    width: 100%;
+    height: auto;
+    background: blu;
+    gap: 10px;
+}
+.videos .card-videos{
+    display: flex;
+    width: calc(100% / 3);
+    aspect-ratio: 16 / 9;
+    background: var(--bg-videos);
+}
+
+#lista-cacarecos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-items: center; /* centraliza só horizontalmente */
+  place-items: center; 
+  gap: 40px;
+}
+
+/* ===== Card dos cacarecos ===== */
+.card {
+    width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.icon, .icon-configs, nav a{
+    border-radius: 100px;
+}
+.card-shorts, .card-videos{
+    border-radius: 10px;
+}

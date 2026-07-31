@@ -6,11 +6,13 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-
+<br><br><br>
+Copie abaixo HTML, CSS e JS do sistema de bloco de código
+<br><br><br><br><br>
 <!-- INÍCIO code container -->
 <div class="code-wrapper">
     <div class="code-container">
-        <span>Container de Código</span>
+        <span>Container de Código HTML</span>
         <span>para adicionar em projetos</span>
         <div>     
             <pre><code class="codeBlock">
@@ -44,7 +46,125 @@
 </div>
 <!-- FIM code container -->
 
-   
+
+<p>Copie o código acima (^) para adicionar um bloco de código, e adicione o estilo no caminho:  <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;container-code/estilo.css&quot;&gt;</code>. Ou use o estilo abaixo:</p>
+
+
+<!-- INÍCIO code container ESTILO -->
+<div class="code-wrapper">
+    <div class="code-container">
+        <span>Estilo CSS</span>
+        <span>Estilo CSS do bloco de código</span>
+        <div>     
+            <pre><code class="codeBlock">
+
+:root{   
+    --code-container: hsl(0 0% 10%);
+    --code-area: hsl(0 0% 15%);
+    --copy-button: hsl(0 0% 25%);
+}
+
+.code-wrapper {
+    display: flex;
+    margin: 20px 0;
+    max-width: 100%;
+    background:;
+}
+
+.code-container {
+  display: flex;            
+  flex-direction: column;
+    width: 700px;
+  gap: 15px;            
+  background: var(--code-container);
+  border-radius: 24px;
+  padding: 20px;
+  box-sizing: border-box; /* botão no topo */
+  color: white;
+}
+
+.code-container pre {
+    width: auto;
+  margin: 0;
+  overflow-x: auto;            /* scroll horizontal apenas no código */
+  white-space: pre;            /* preserva espaços e quebras */
+  padding: 10px;
+  flex: 1;                     /* ocupa todo espaço disponível */
+  background: var(--code-area);
+  border-radius: 4px;
+  color: #dcdcdc;
+  font-family: monospace;
+  max-height: 300px;
+}
+
+.code-container span:nth-child(1) {
+    color: re;
+    font-weight: bold;
+}
+.code-container .sticky{
+    background: var(--code-container);
+    padding: 10px 0;
+    position: sticky;             /* sticky no topo do container */
+    top: ;
+    bottom: 0;
+}
+
+.copyBtn {  
+  align-self: ;
+  background: var(--copy-button);
+  color: #00aaff;
+  border: none;
+  padding: 12px 60px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.copyBtn:hover {
+  background: #0088cc;
+    color: white;
+}
+
+
+            </code></pre>
+            <div class="sticky"><button class="copyBtn">Copiar</button></div>   
+        </div>
+    </div>
+</div>
+<!-- FIM code container ESTILO-->
+
+<!-- INÍCIO code container JS-->
+<div class="code-wrapper">
+    <div class="code-container">
+        <span>JavaScript</span>
+        <span>JS para o bloco de código funcionar</span>
+        <div>     
+            <pre><code class="codeBlock">
+
+// Seleciona todos os botões
+        const copyButtons = document.querySelectorAll(".copyBtn");
+
+        copyButtons.forEach(btn => {
+          btn.addEventListener("click", () => {
+            // Encontra o <code> dentro do mesmo container
+            const codeBlock = btn.closest(".code-wrapper").querySelector(".codeBlock");
+            navigator.clipboard.writeText(codeBlock.textContent).then(() => {
+              btn.textContent = "Copiado!";
+            setTimeout(() => (btn.textContent = "Copiar"), 1500);
+                });
+             });
+         });
+
+
+            </code></pre>
+            <div class="sticky"><button class="copyBtn">Copiar</button></div>   
+        </div>
+    </div>
+</div>
+<!-- FIM code container JS-->
+
+<br><br><br><br><br>
+<p>Exemplo de como é o bloco de código abaixo:</p> 
+<br>
+
 <!-- INÍCIO code container -->
 <div class="code-wrapper">
     <div class="code-container">

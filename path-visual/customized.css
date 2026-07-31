@@ -1,0 +1,55 @@
+:root {
+    --bg-site:;
+    --bg-card: hsl(0, 0%, 95%, 0.8);  
+    --bg-container: hsl(0, 0%, 100%); 
+    --bg-container-hover: hsl(0, 0%, 85%); 
+    --large-button: hsl(0, 0%, 100%);
+    --nav-buttons: hsl(0, 0%, 100%);
+    --square-link: hsl(0, 0%, 100%);       
+    
+    --line-large-button-clear: hsl(0, 0%, 85%);
+    
+    --line-photo-profile: hsl(0, 0%, 40%);
+   
+    /* cor texto */
+    --text-default: hsl(0, 0%, 3%);
+}
+
+@media (prefers-color-scheme: dark) {  
+    :root {
+    --bg-site: hsl(0, 0%, 8%);
+    --bg-card: hsl(0, 0%, 20%);  
+    --bg-container: hsl(0, 0%, 30%); 
+    --large-button: hsl(0, 0%, 30%);
+    --nav-buttons: hsl(0, 0%, 30%);
+    --square-link: hsl(0, 0%, 30%);
+    
+    --line-large-button-clear: hsl(0, 0%, 20%);
+    
+    --text-default: hsl(0, 0%, 95%);
+    
+    --line-photo-profile: hsl(0, 0%, 60%);
+}
+}
+
+.image-background {
+display: flex;
+width: 100vw;
+height: 100vh;
+    background-image: url('../images/teste-melanie.png')!important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    filter: blur(10px);
+    inset: 0;
+    z-index: -1;
+    position: fixed;
+    transform: scale(1.1);
+}
+.image-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+}

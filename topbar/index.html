@@ -8,6 +8,7 @@
 
     <!-- Estilos -->
     <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="../container-code/estilo.css"
   </head>
   <body>
     <div class="topbar">
@@ -57,6 +58,60 @@
     </section>
 
    </main>
+   
+   <p>para fazer isso primeiro precisa ter um div com classe "topbar",  e depois colocar o código JS.
+   <br>
+   ATENÇÃO no CSS, voce precisa ter uma classe chamada de ".topbar.scrolled", para funcionar o JS
+   </p>
+
+
+<!-- INÍCIO code container -->
+<div class="code-wrapper">
+    <div class="code-container">
+        <span>HTML</span>
+        <div>     
+            <pre><code class="codeBlock">
+&lt;div class=&quot;topbar&quot;&gt;
+    &lt;h1&gt;Santa Menefreda&lt;/h1&gt;
+    &lt;div class=&quot;topbar-links&quot;&gt;
+        &lt;a href=&quot;&quot;&gt;Recife&lt;/a&gt;
+        &lt;a href=&quot;&quot;&gt;Jaboatão dos Guararapes&lt;/a&gt;
+        &lt;a href=&quot;&quot;&gt;Sobre&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+            <div class="sticky"><button class="copyBtn">Copiar</button></div>   
+        </div>
+    </div>
+</div>
+<!-- FIM code container -->
+            
+
+<!-- INÍCIO code container -->
+<div class="code-wrapper">
+    <div class="code-container">
+        <span>Título</span>
+        <span>descrição</span>
+        <div>     
+            <pre><code class="codeBlock">
+&lt;script&gt;
+    window.addEventListener(&quot;scroll&quot;, () =&gt; {
+    const header = document.querySelector(&quot;.topbar&quot;);
+    if (window.scrollY &gt; 0) {
+      header.classList.add(&quot;scrolled&quot;);
+    } else {
+      header.classList.remove(&quot;scrolled&quot;);
+    }
+    });
+&lt;/script&gt;
+            </code></pre>
+            <div class="sticky"><button class="copyBtn">Copiar</button></div>   
+        </div>
+    </div>
+</div>
+<!-- FIM code container -->
+            
+
 
   <script>
     window.addEventListener("scroll", () => {

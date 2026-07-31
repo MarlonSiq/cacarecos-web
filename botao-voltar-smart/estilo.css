@@ -1,0 +1,23 @@
+.menu-flutuante-back {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #222;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 15px;
+  transition: background 0.3s ease;
+  z-index: 999;
+}
+
+.menu-flutuante-back:hover {
+  background: #444;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}

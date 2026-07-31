@@ -1,0 +1,126 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Conversor de HTML para Texto Seguro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: #f2f2f2;
+      padding: 20px;
+    }h1 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  gap:;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+textarea {
+  width: 100%;
+  min-height: 220px;
+  background: #1c1c1c;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+button {
+  padding: 10px 16px;
+  background: #5b5bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  width: fit-content;
+}
+
+button.secondary {
+  background: #2f2f2f;
+  border: 1px solid #444;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Conversor de HTML para entidades seguras</h1><div class="grid">
+  <div class="block">
+    <label class="label">Código HTML original</label>
+    <textarea id="input" placeholder="<div>Olá mundo</div>"></textarea>
+    <div class="actions">
+      <button onclick="convert()">Converter</button>
+    </div>
+  </div>
+
+  <div class="block">
+    <label class="label">Resultado para exibição</label>
+    <textarea id="output" readonly></textarea>
+    <div class="actions">
+      <button class="secondary" onclick="copyOutput()">Copiar</button>
+    </div>
+  </div>
+</div>
+
+  </div>  <script>
+    function convert() {
+      const input = document.getElementById('input').value;
+
+      const converted = input
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+
+      document.getElementById('output').value = converted;
+    }
+
+    function copyOutput() {
+      const output = document.getElementById('output');
+      output.select();
+      output.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(output.value);
+    }
+  </script></body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO básico -->
+    <title>Path:&#92;Path</title>
+
+    <!-- Evita que a página seja indexada enquanto está em construção -->
+    <!-- <meta name="robots" content="noindex, nofollow"> -->
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Path:\path">
+    <meta property="og:description" content="Organização de links e caminhos digitais">
+    <meta property="og:image" content="https://mrzzo.github.io/pth/images/preview-link.webp">
+    <meta property="og:url" content="https://mrzzo.github.io/pth/">
+    <meta property="og:type" content="website">
+
+   <meta name="twitter:card" content="summary_large_image">
+  
+    <meta name="theme-color" content="#ffffff" id="theme-color-meta">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/28554f1995.js" crossorigin="anonymous"></script>
+
+    <script src="../../js/button-share.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+    <script src="../../js/verification-button.js" defer></script>
+    <script src="../../components/footer.js" defer></script>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/hover.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <!-- <link rel="stylesheet" href="customized.css"> -->
+
+    <!-- <link rel="icon" href="../../images/favicon.svg" type="image/svg+xml"> -->
+    <link rel="icon" href="../../images/favicon-light.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="../../images/favicon-dark.svg" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../images/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../../images/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="../../images/favicon-180.png" sizes="180x180">
+
+
+
+</head>
+
+<body>
+
+    <div class="image-background"></div>
+    <div class="card">
+        
+        <header>
+            <nav class="nav">
+                <a href="../../index.html" rel="noopener noreferrer" translate="no">Path</a>
+                <button class="link-button" onclick="share()">
+                    <span class="material-symbols-outlined icon-light">share</span>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Conteúdo principal -->
+
+
+        <!-- IN Profile Photo Verified -->
+<section class="container-intro">
+            <div class="photo-profile">                
+                <img src="../../images/profile-path.png" class="profile" alt="">
+            </div>
+            <h2 class="h2-intro">Path<button id="menuBtn" onclick="menu1.hidden^=1"><span class="material-symbols-outlined icon-fill icon-intro">Verified</span></button></h2>
+            <p class="p-0-5-translucent">/pth</p>
+        </section>
+
+        <div id="menu1" class="modal">
+            <div class="overlay"></div>
+
+            <div id="content">
+                <button id="closeBtn">✕</button>
+                <p class="p-0-5-translucent">Selo de Perfil Verificado</p>
+                <span class="material-symbols-outlined icon-fill icon-intro">Verified</span>
+                <p>este Path: Folder pertence ao Path</p>
+            </div>
+        </div>
+<!-- FIM Profile Photo Verified -->
+
+
+
+        <div id="menu1" class="modal">
+            <div class="overlay"></div>
+
+            <div id="content">
+                <button id="closeBtn">✕</button>
+                <p class="p-0-5-translucent">Selo de Perfil Verificado</p>
+                <span class="material-symbols-outlined icon-fill icon-intro">Verified</span>
+                <p>este Path:\Folder pertence à Path(TM)</p>
+            </div>
+        </div>
+
+        <script>
+            const btn = document.getElementById("menuBtn");
+              const modal = document.getElementById("menu1");
+              const overlay = modal.querySelector(".overlay");
+              const closeBtn = document.getElementById("closeBtn");
+            
+              let scrollY = 0;
+            
+              btn.onclick = () => {
+                scrollY = window.scrollY;
+                document.body.classList.add("modal-open");
+                document.body.style.top = `-${scrollY}px`;
+                modal.classList.add("active");
+              };
+            
+              function closeModal() {
+                modal.classList.remove("active");
+                document.body.classList.remove("modal-open");
+                document.body.style.top = "";
+                window.scrollTo(0, scrollY);
+              }
+            
+              closeBtn.onclick = closeModal;
+              overlay.onclick = closeModal;
+        </script>
+
+
+        <!--  <br>
+        <section class="container-intro">
+            <img src="../images/teste.webp" class="photo-profile" alt="">           
+            <h2>Marlon Siqueira</h2>            
+            <p>/msq</p>
+        </section>    -->
+
+        <!-- <section class="container-intro-p">
+            <p class="p">Descreva o que você oferece aqui.</p>
+
+        </section> -->    
+
+
+        <div class="container-clear">
+            <a href="" class="large-button">
+                <div class="icon-button"><span class="material-symbols-outlined icon-light">Draft</span></div>
+                <p class="a">Sobre nós</p>
+            </a>
+            <a href="" class="large-button">
+                <div class="icon-button"><span class="material-symbols-outlined icon-light">Draft</span></div>
+                <p class="a">Website</p>
+            </a>
+            <a href="" class="large-button">
+                <div class="icon-button"><span class="material-symbols-outlined icon-light">Draft</span></div>
+                <p class="a">Serviço</p>
+            </a>
+            <a href="" class="large-button">
+                <div class="icon-button"><span class="material-symbols-outlined icon-light">Draft</span></div>
+                <p class="a">Fale Conosco</p>
+            </a>
+        </div>
+        
+        <div class="container-links">
+            <a href="" class="square-links material-symbols-outlined icon-light" id="link-"><i class="fa-brands fa-instagram"></i></a>
+            <a href="" class="square-links material-symbols-outlined icon-light" id="link-"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="" class="square-links material-symbols-outlined icon-light" id="link-"><i class="fa-brands fa-youtube"></i></a>
+            <a href="" class="square-links material-symbols-outlined icon-light" id="link-"><i class="fa-brands fa-x-twitter"></i></a>                       
+        </div>
+
+        
+        <div id="footer"></div>
+
+
+
+    </div>
+
+    <!-- <div class="banner-infos-web">
+       <p>Path &copy; <script>document.write(new Date().getFullYear())</script></p>
+    </div> -->
+
+    <!-- <script src="theme-init.js"></script> -->
+
+    <script>
+    </script>
+
+
+</body>
+
+</html>

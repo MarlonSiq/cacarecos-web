@@ -1,0 +1,63 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  background: orange;
+}
+
+.menu-container {
+  position: relative; /* referência pro menu */
+}
+
+.menu-container button {
+  border: none;
+  font-size: 1.5rem;
+  background: white;
+  cursor: pointer;
+}
+
+#menu1 {
+  position: absolute; /* fica sobreposto, não empurra nada */
+  top: 100%; /* logo abaixo do botão */
+  left: 0;
+  background: green;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+#menu2 {
+  position: absolute; /* fica sobreposto, não empurra nada */
+  top: 130%; /* logo abaixo do botão */
+  left: 0;
+  background: green;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+/* 🔻 A setinha */
+#menu2::before {
+  content: "";
+  position: absolute;
+  top: -8px; /* sobe a setinha */
+  left: 5px; /* ajusta a posição lateral */
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 8px solid green; /* mesma cor do fundo do menu */
+}
+
+#menu1 li, #menu2 li {
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+#menu1 li:hover, #menu2 li:hover {
+  background: darkgreen;
+}
